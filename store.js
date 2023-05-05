@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
+import basketReducer from "./features/basketSlice";
 
-import rootReducer from './reducers'
-
-export const store = configureStore({ reducer: rootReducer });
+export const store = configureStore({ reducer: {
+    basket: basketReducer
+}, 
+});
 // The store now has redux-thunk added and the Redux DevTools Extension is turned on
