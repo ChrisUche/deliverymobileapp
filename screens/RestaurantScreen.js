@@ -91,12 +91,46 @@ const RestaurantScreen = () => {
 
               
               <DishRow className=" h-56 w-full bg-gray-300 p-4"
+                  id={123}
+                  name="food"
+                  description="yrs fvvf"
+                  price={44}
+                  imgUrl="https://www.foodandwine.com/thmb/_Bfuv0FsNMVExh12yJBAIlnIIRY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/McDonalds-Hacks-Menu-FT-1-BLOG0122-4ac9d62f6c9143be8da3d0a8553348b0.jpg"
+                />
+
+               <DishRow className=" h-56 w-full bg-gray-300 p-4"
                 id={123}
                 name="food"
                 description="yrs fvvf"
                 price={44}
                 imgUrl="https://www.foodandwine.com/thmb/_Bfuv0FsNMVExh12yJBAIlnIIRY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/McDonalds-Hacks-Menu-FT-1-BLOG0122-4ac9d62f6c9143be8da3d0a8553348b0.jpg"
               />
+
+               <DishRow className=" h-56 w-full bg-gray-300 p-4"
+                id={123}
+                name="food"
+                description="yrs fvvf"
+                price={44}
+                imgUrl="https://www.foodandwine.com/thmb/_Bfuv0FsNMVExh12yJBAIlnIIRY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/McDonalds-Hacks-Menu-FT-1-BLOG0122-4ac9d62f6c9143be8da3d0a8553348b0.jpg"
+              />
+
+              <DishRow className=" h-56 w-full bg-gray-300 p-4"
+                id={123}
+                name="food"
+                description="yrs fvvf"
+                price={44}
+                imgUrl="https://www.foodandwine.com/thmb/_Bfuv0FsNMVExh12yJBAIlnIIRY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/McDonalds-Hacks-Menu-FT-1-BLOG0122-4ac9d62f6c9143be8da3d0a8553348b0.jpg"
+              />
+
+              <DishRow className=" h-56 w-full bg-gray-300 p-4"
+                id={123}
+                name="food"
+                description="yrs fvvf"
+                price={44}
+                imgUrl="https://www.foodandwine.com/thmb/_Bfuv0FsNMVExh12yJBAIlnIIRY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/McDonalds-Hacks-Menu-FT-1-BLOG0122-4ac9d62f6c9143be8da3d0a8553348b0.jpg"
+              />
+
+              
             
       </View>
     </ScrollView>

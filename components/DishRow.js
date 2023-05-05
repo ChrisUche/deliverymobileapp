@@ -12,7 +12,9 @@ const DishRow = ({id, name, description, price, image,imgUrl}) => {
     <>
     <TouchableOpacity 
          onPress={() => setisPressed(!isPressed)}
-         className="bg-white border p-4 border-gray-200">
+         className={`bg-white border p-4 border-gray-200 ${
+            isPressed && "border-b-0"
+         }`}>
       <View className="flex-row"> 
         <View className="flex-1 pr-2">
             <Text className="text-lg mb-1" >{name}</Text>
@@ -36,17 +38,17 @@ const DishRow = ({id, name, description, price, image,imgUrl}) => {
     </TouchableOpacity>
 
     {isPressed && (
-        <View>
-            <View>
+        <View className="bg-white px-4">
+            <View className="flex-row items-center space-x-2 pb-3">
                 <TouchableOpacity>
-                    <MinusCircleIcon
+                    <MinusCircleIcon color="#00CCBB"
                     size={40}/>
                 </TouchableOpacity>
 
                 <Text>0</Text>
 
                 <TouchableOpacity>
-                    <PlusCircleIcon
+                    <PlusCircleIcon color="#00CCBB"
                     size={40}/>
                 </TouchableOpacity>
             </View>
