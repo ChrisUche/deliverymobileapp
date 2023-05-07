@@ -99,7 +99,7 @@ const RestaurantScreen = () => {
                 />
 
                <DishRow className=" h-56 w-full bg-gray-300 p-4"
-                id={123}
+                id={124}
                 name="food"
                 description="yrs fvvf"
                 price={44}
@@ -107,7 +107,7 @@ const RestaurantScreen = () => {
               />
 
                <DishRow className=" h-56 w-full bg-gray-300 p-4"
-                id={123}
+                id={125}
                 name="food"
                 description="yrs fvvf"
                 price={44}
@@ -115,7 +115,7 @@ const RestaurantScreen = () => {
               />
 
               <DishRow className=" h-56 w-full bg-gray-300 p-4"
-                id={123}
+                id={126}
                 name="food"
                 description="yrs fvvf"
                 price={44}
@@ -123,7 +123,7 @@ const RestaurantScreen = () => {
               />
 
               <DishRow className=" h-56 w-full bg-gray-300 p-4"
-                id={123}
+                id={127}
                 name="food"
                 description="yrs fvvf"
                 price={44}

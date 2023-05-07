@@ -4,20 +4,25 @@ import React, { useState }from 'react';
 import { formatCurrency } from "../utility/formatCurrency"
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
 import { useDispatch, useSelector }from "react-redux";
-import { addToBasket, selectBasketItems } from '../features/basketSlice';
+import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWithId } from '../features/basketSlice';
 
 
 
 const DishRow = ({id, name, description, price,imgUrl}) => {
     const [isPressed, setisPressed] = useState(false);
-    const items = useSelector(selectBasketItems);
+    const items = useSelector((state) => selectBasketItemsWithId(state, id));
     const dispatch = useDispatch();
-    usesel
 
     const addItemToBasket = () => {
         dispatch(addToBasket({id, name, description, price, imgUrl}));
     };
+    
 
+    const removeItemFromBasket = () => {
+        if(!items.length > 0) return;
+
+        dispatch(removeFromBasket({id, name, description, price, imgUrl}));
+    };
     
     
   return (
@@ -52,8 +57,10 @@ const DishRow = ({id, name, description, price,imgUrl}) => {
     {isPressed && (
         <View className="bg-white px-4">
             <View className="flex-row items-center space-x-2 pb-3">
-                <TouchableOpacity>
-                    <MinusCircleIcon color="#00CCBB"
+                <TouchableOpacity onPress={removeItemFromBasket}>
+                    <MinusCircleIcon 
+                    disabled={!items.length}
+                    color={items.length > 0 ? "#00CCBB" : "gray"}
                     size={40}/>
                 </TouchableOpacity>
 
