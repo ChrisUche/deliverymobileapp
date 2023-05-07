@@ -15,5 +15,4 @@ const BasketIcon = () => {
     </View>
   )
 }
-
 export default BasketIcon
