@@ -43,6 +43,7 @@ export const selectBasketItems =  (state) => state.basket.items;
 //this is used to filter items with "id" so only the food in the menu you are interacting with "adds" of "removes"
 export const selectBasketItemsWithId =  (state, id) => state.basket.items.filter((item) => item.id === id)  ;
 
-
+//for the "Total"
+export const selectBasketTotal = (state) => state.basket.items.reduce((total, item) => total += item.price, 0);
 
 export default basketSlice.reducer;
