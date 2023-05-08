@@ -12,9 +12,12 @@ import {
   } from "react-native-heroicons/solid";
 import DishRow from '../components/DishRow';
 import BasketIcon from '../components/BasketIcon';
+import { useDispatch } from 'react-redux';
+import { setRestaurant } from '../features/restaurantSlice';
 
 const RestaurantScreen = () => {
     const navigation  =useNavigation();
+    const dispatch  =useDispatch();
 
     const {params: {
 
@@ -30,6 +33,25 @@ const RestaurantScreen = () => {
           lat,
     },
 } = useRoute();
+
+  //to keep track of which restaurant you're in
+  useEffect(() => {
+    dispatch(setRestaurant({
+      id,
+      imgUrl,
+      title,
+      rating,
+      genre,
+      address,
+      short_description,
+      dishes,
+      long,
+      lat,
+    })
+    );
+
+  }, [dispatch])
+  
 
     useLayoutEffect(() => {
         navigation.setOptions({
