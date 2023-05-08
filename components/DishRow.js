@@ -61,14 +61,14 @@ const DishRow = ({id, name, description, price,imgUrl}) => {
                     <MinusCircleIcon 
                     disabled={!items.length}
                     color={items.length > 0 ? "#00CCBB" : "gray"}
-                    size={40}/>
+                    size={50}/>
                 </TouchableOpacity>
 
                 <Text>{items.length}</Text>
 
                 <TouchableOpacity onPress={addItemToBasket}>
                     <PlusCircleIcon color="#00CCBB"
-                    size={40}/>
+                    size={50}/>
                 </TouchableOpacity>
             </View>
 
