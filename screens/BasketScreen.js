@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, SafeAreaView} from 'react-native'
+import { View, Text, TouchableOpacity, SafeAreaView, Image} from 'react-native'
 import React, { useMemo, useState , useEffect}from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,9 +24,9 @@ const dispatch = useDispatch();
     setGroupedItemInBasket(groupedItems);
     }, [items]);
   return (
-    <SafeAreaView>
-        <View>
-            <View>
+    <SafeAreaView className="flex-1 bg-white">
+        <View className="flex-1 bg-gray-100">
+            <View className="p-5 border-b border-[#00CCBB] bg-white shadow-xs ">
                 <View>
                     <Text className="text-lg font-bold text-center">BasketScreen</Text>
                     <Text className="text-gray-400 text-center">{restaurant.title}</Text>
@@ -35,6 +35,19 @@ const dispatch = useDispatch();
                 <TouchableOpacity onPress={navigation.goBack} className="rounded-full bg-gray-100 absolute top-3 right-5">
                     <XCircleIcon color="#00CCBB" height={50} width={50} />
                 </TouchableOpacity>
+            </View>
+
+            <View className="flex-row items-center  space-x-4 px-4 py-3 bg-white my-5">
+            <Image
+                source={{
+                uri: "https://links.papareact.com/wru",
+                }}
+                className="h-7 w-7 bg-gray-300 p-4 rounded-full"
+            />
+            <Text className="flex-1">Deliver in 30-50 min</Text>
+            <TouchableOpacity>
+                <Text className="text-[#00CCBB]">Change</Text>
+            </TouchableOpacity>
             </View>
         </View>
     </SafeAreaView>
