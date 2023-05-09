@@ -1,10 +1,9 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, SafeAreaView} from 'react-native'
 import React, { useMemo, useState , useEffect}from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
 import { selectBasketItems } from '../features/basketSlice';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { XCircleIcon } from 'react-native-heroicons/solid';
 
 const BasketScreen = () => {
