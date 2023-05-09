@@ -1,5 +1,5 @@
 import { View, Text,ScrollView, TouchableOpacity ,Image} from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { ArrowLeftIcon, ChevronRightIcon, MapPinIcon, QuestionMarkCircleIcon } from 'react-native-heroicons/solid';
 import {
