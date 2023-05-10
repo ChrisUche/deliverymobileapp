@@ -1,12 +1,14 @@
-import { View, Text, TouchableOpacity, SafeAreaView, Image} from 'react-native'
+import { View, Text, TouchableOpacity, SafeAreaView, Image, ScrollView} from 'react-native'
 import React, { useMemo, useState , useEffect}from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
 import { selectBasketItems } from '../features/basketSlice';
 import { XCircleIcon } from 'react-native-heroicons/solid';
+import { formatCurrency } from "../utility/formatCurrency"
 
-const BasketScreen = () => {
+
+const BasketScreen = ({imgUrl}) => {
 const navigation = useNavigation();
 const restaurant = useSelector(selectRestaurant);
 const items = useSelector(selectBasketItems);
@@ -49,6 +51,28 @@ const dispatch = useDispatch();
                 <Text className="text-[#00CCBB]">Change</Text>
             </TouchableOpacity>
             </View>
+
+            <ScrollView>
+                {Object.entries(groupedItemInBasket).map(([key, items]) => (
+                    <View>
+                        <Text>{items.length} x</Text>
+                        <Image
+                            source={{ uri: items[0]?.imgUrl }}
+                            className="h-12 w-12 rounded-full"
+                        />
+                        <Text className="flex-1">{items[0]?.name} x</Text>
+                        <Text className="flex-1">
+                            <Text className="text-gray-400 mt-2" >{formatCurrency(items[0]?.price)}</Text>
+
+                        </Text>
+
+                    </View>
+                )
+                
+                )
+                
+                }
+            </ScrollView>
         </View>
     </SafeAreaView>
   );
