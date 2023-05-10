@@ -104,6 +104,10 @@ const dispatch = useDispatch();
                     </Text>
 
                 </View>
+
+                <TouchableOpacity className="bg-[#00CCBB] items-center rounded-lg p-4 mt-1">
+                    <Text className="text-white font-extrabold text-lg">Place Order</Text>
+                </TouchableOpacity>
             </View>
         </View>
     </SafeAreaView>
