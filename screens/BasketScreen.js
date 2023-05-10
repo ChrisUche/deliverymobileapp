@@ -3,7 +3,7 @@ import React, { useMemo, useState , useEffect}from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
-import { removeFromBasket, selectBasketItems } from '../features/basketSlice';
+import { removeFromBasket, selectBasketItems, selectBasketTotal } from '../features/basketSlice';
 import { XCircleIcon } from 'react-native-heroicons/solid';
 import { formatCurrency } from "../utility/formatCurrency"
 
@@ -12,6 +12,7 @@ const BasketScreen = ({imgUrl}) => {
 const navigation = useNavigation();
 const restaurant = useSelector(selectRestaurant);
 const items = useSelector(selectBasketItems);
+const basketTotal = useSelector(selectBasketTotal);
 const [groupedItemInBasket, setGroupedItemInBasket] = useState([])
 const dispatch = useDispatch();
 
@@ -78,6 +79,16 @@ const dispatch = useDispatch();
                     </View>
                 ))}
             </ScrollView>
+
+            <View>
+                <View>
+                    <Text>SubTotal</Text>
+                    <Text>
+                    {formatCurrency(basketTotal)}
+                    </Text>
+
+                </View>
+            </View>
         </View>
     </SafeAreaView>
   );
