@@ -80,11 +80,27 @@ const dispatch = useDispatch();
                 ))}
             </ScrollView>
 
-            <View>
-                <View>
-                    <Text>SubTotal</Text>
-                    <Text>
+            <View className="p-5 bg-white mt-5 -space-y-4">
+                <View className="flex-row justify-between">
+                    <Text className="text-gray-400">SubTotal</Text>
+                    <Text className="text-gray-400">
                     {formatCurrency(basketTotal)}
+                    </Text>
+
+                </View>
+
+                <View className="flex-row justify-between">
+                    <Text className="text-gray-400">Delivery Fee</Text>
+                    <Text className="text-gray-400">
+                    {formatCurrency(3.74)}
+                    </Text>
+
+                </View>
+
+                <View className="flex-row justify-between">
+                    <Text>Order Total</Text>
+                    <Text className="font-extrabold">
+                    {formatCurrency(basketTotal + 3.74)}
                     </Text>
 
                 </View>
