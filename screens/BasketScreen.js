@@ -105,7 +105,7 @@ const dispatch = useDispatch();
 
                 </View>
 
-                <TouchableOpacity className="bg-[#00CCBB] items-center rounded-lg p-4 mt-1">
+                <TouchableOpacity onPress={() => navigation.navigate("PreparingOrderScreen")} className="bg-[#00CCBB] items-center rounded-lg p-4 mt-2">
                     <Text className="text-white font-extrabold text-lg">Place Order</Text>
                 </TouchableOpacity>
             </View>
