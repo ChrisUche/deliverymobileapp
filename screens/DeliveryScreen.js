@@ -53,6 +53,16 @@ const DeliveryScreen = () => {
         className="flex-1  -mt-10 z-0"
         mapType='mutedStandard'
       >
+        <Marker 
+        coordinate={{
+          latitude: restaurant.lat,
+          longitude: restaurant.long,
+        }}
+        title={restaurant.title}
+        description={restaurant.short_description}
+        identifier='origin'
+        pinColor='#00CCBB'
+        />
 
       </MapView>
     </View>
