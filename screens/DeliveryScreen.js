@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, Image, Linking  } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux';
@@ -12,6 +12,12 @@ import MapView, { Marker } from 'react-native-maps';
 const DeliveryScreen = () => {
     const navigation = useNavigation();
     const restaurant = useSelector(selectRestaurant);
+    const handleCallPress = () => {
+      const phoneNumber = '07032342671'; // Replace with the actual phone number you want to call
+      const url = `tel:${phoneNumber}`;
+      Linking.openURL(url);
+    };
+  
   return (
     <View className="bg-[#00CCBB] flex-1">
       <SafeAreaView className="z-50">
@@ -63,8 +69,22 @@ const DeliveryScreen = () => {
         identifier='origin'
         pinColor='#00CCBB'
         />
-
       </MapView>
+
+      <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
+          <Image 
+              source={require("../assets/chris.jpg")}
+              className=" h-12 w-12 bg-gray-300 p-4 rounded-full ml-5"
+          />
+          <View className="flex-1">
+            <Text className="text-lg">Uche Chris</Text>
+            <Text className="text-gray-400">Your Rider</Text>
+          </View>
+
+          <TouchableOpacity onPress={handleCallPress}>
+              <Text className="text-[#00CCBB] text-lg mr-5 font-bold" >Call</Text>
+          </TouchableOpacity>
+      </SafeAreaView>
     </View>
   );
 };
