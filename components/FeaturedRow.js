@@ -46,8 +46,8 @@ const FeaturedRow = ({id, title, description}) => {
             address="434 allen st"
             short_description="This is a Test description"
             dishes={[]}
-            long={20}
-            lat={0}
+            long={-86.765082}
+            lat={21.103209}
             />
         
         {/* RestauranrCards */}
@@ -60,8 +60,8 @@ const FeaturedRow = ({id, title, description}) => {
             address="434 allen st"
             short_description="This is a Test description"
             dishes={[]}
-            long={20}
-            lat={0}
+            long={48.073930549783 }
+            lat={29.340590616427}
             />
         {/* RestauranrCards */}
         <RestaurantCard
@@ -73,8 +73,8 @@ const FeaturedRow = ({id, title, description}) => {
             address="434 allen st"
             short_description="This is a Test description"
             dishes={[]}
-            long={20}
-            lat={0}
+            long={22.445409}
+            lat={-33.972582}
             />
         {/* RestauranrCards */}
         <RestaurantCard
