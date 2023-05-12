@@ -6,7 +6,6 @@ import { selectRestaurant } from '../features/restaurantSlice';
 import { XCircleIcon, XMarkIcon } from 'react-native-heroicons/solid';
 import * as Progress from 'react-native-progress';
 import MapView, { Marker } from 'react-native-maps';
-import { StyleSheet, View } from 'react-native';
 
 
 
@@ -43,6 +42,19 @@ const DeliveryScreen = () => {
           </Text>
          </View>
       </SafeAreaView>
+
+      <MapView 
+        initialRegion={{
+          latitude: restaurant.lat,
+          longitude: restaurant.long,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+        }}
+        className="flex-1  -mt-10 z-0"
+        mapType='mutedStandard'
+      >
+
+      </MapView>
     </View>
   );
 };

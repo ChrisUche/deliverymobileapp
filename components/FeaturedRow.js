@@ -32,8 +32,8 @@ const FeaturedRow = ({id, title, description}) => {
             address="434 allen st"
             short_description="Applewood smoked bacon? Yes. Creamy ranch sauce? Double yes... Try it today, for a limited time only—or go a little extra with toppings and get the Bacon Ranch Deluxe McCrispy™. "
             dishes={[]}
-            long={20}
-            lat={0}
+            long={-95.619456}
+            lat={37.033289}
             />
 
         {/* RestauranrCards */}
